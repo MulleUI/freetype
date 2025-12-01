@@ -4,7 +4,7 @@
  *
  *   ANSI-specific FreeType low-level system interface (body).
  *
- * Copyright (C) 1996-2023 by
+ * Copyright (C) 1996-2025 by
  * David Turner, Robert Wilhelm, and Werner Lemberg.
  *
  * This file is part of the FreeType project, and may only be used,
@@ -206,7 +206,7 @@
    *     The number of bytes to read from the stream.
    *
    * @Return:
-   *   The number of bytes actually read.  If `count' is zero (this is,
+   *   The number of bytes actually read.  If `count' is zero (that is,
    *   the function is used for seeking), a non-zero return value
    *   indicates an error.
    */
@@ -280,7 +280,7 @@
     stream->close = ft_ansi_stream_close;
 
     FT_TRACE1(( "FT_Stream_Open:" ));
-    FT_TRACE1(( " opened `%s' (%ld bytes) successfully\n",
+    FT_TRACE1(( " opened `%s' (%lu bytes) successfully\n",
                 filepathname, stream->size ));
 
     return FT_Err_Ok;
